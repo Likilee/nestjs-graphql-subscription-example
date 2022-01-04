@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Chat {
+  id: Int!
+  message: String!
+  roomId: Int!
+}
+
+type Query {
+  getChats: [Chat!]!
+}
+
+type Mutation {
+  addChat(addChatInput: AddChatInput!): Chat!
+}
+
+input AddChatInput {
+  id: Int!
+  message: String!
+  roomId: Int!
+}
+
+type Subscription {
+  messageAdded: Chat!
+}
